@@ -14,7 +14,7 @@ function increaseNum(){
 	text.innerHTML = a + '%';
 	console.log(a);
 	
-	if(a >= 100){
+	if(a > 100){
 		text.innerHTML = 100 + '%';
 		clearInterval(op);
 		
