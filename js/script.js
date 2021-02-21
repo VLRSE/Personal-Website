@@ -10,11 +10,15 @@ function increaseNum(){
 
 	let a = window.getComputedStyle(progress, ':before').getPropertyValue('width');
 
-	a = Math.floor((parseInt(a)/ 10) * 3 +2);
+	a = Math.floor((parseInt(a)/ 10) * 3 );
 	text.innerHTML = a + '%';
 	console.log(a);
-	if(a == 100){
+	
+	if(a >= 100){
 		clearInterval(op);
+
+		console.log(a );
+		text.innerHTML = 100 + '%';
 
 		$(".loader .inner-text").fadeOut(750, function(){
 			$(".loader").fadeOut(800,function(){
