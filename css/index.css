@@ -1,0 +1,888 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+$ani-speed: 2s;
+$ani-delay: 1s;
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+body, html{
+	background-color: #121212;
+    color: #ffff;
+    text-align: center;
+   	font-size: 12px;  
+  	letter-spacing: 2px;
+	line-height: 2px;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+}
+body{
+		font-family: 'Montserrat', serif;
+}
+
+.row{
+
+	margin-left: 0;
+	margin-right: 0;
+
+}
+
+.h1, h1{
+	font-size: 16px;
+}
+
+
+
+.logo{
+	position: relative;
+	left:1.6666rem;
+}
+
+/* Page Loader*/
+.loader{
+	width: 100%;
+	height: 100%;
+	background-color: #121212;
+	position: fixed;
+	top: 0px;
+	left:0px;
+	z-index: 1000;
+}
+
+.main{
+	width: 80%;
+	height: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: column;
+	 margin: 0 10%;
+	 
+}
+
+
+
+.progress{
+	width: 100%;
+	height: 8px;
+	background-color: #22a7f0;
+	border-radius: 50px;
+	position: relative;
+	margin: 16px;
+	
+}
+
+.progress::before{
+	content: '';
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background:#8E2DE2;
+	border-radius: 50px;
+	background: linear-gradient(to right, #22a7f0, #8E2DE2);
+	animation: anim 2s;
+
+}
+
+@keyframes anim{
+	0%{width: 0%;}
+	20%{width: 5%;}
+	50%{width: 25%;}
+	60%{width: 35%;}
+	100%{width: 100%;}
+}
+
+.main p{
+	font-size: 1rem;
+	font-family: 'Lobster', cursive;
+	color:#EEEEEE;
+	margin-bottom:15px;
+}
+
+.loader .inner{
+	width: 100%;
+	height: 100%;
+	background: url("../images/preloaderGIF.gif") center center no-repeat;
+}
+
+.loader .inner-text{
+	 position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    display: inline-block;
+    text-align: center;
+	margin-bottom: -5em;
+	z-index: 1500;
+	color: #aaaa;
+	font-size: 14px
+}
+
+
+
+/*GLOBAL CLASSES*/
+.section-body-container h5{
+
+    color: #EEEEEE;
+    font-weight: 400;
+}
+
+.secondaryTextColor{
+	color: #BEC7D5;
+}
+
+
+.inner-grid-container{
+	 grid-template-rows: auto auto auto;
+    grid-gap: 16px;
+    margin: 0 6%;
+    padding: 15% 0 ;
+    text-align: center;
+    justify-content: center;
+	color: #ffff;
+	background-color: transparent;
+	position: relative;
+	left: auto;
+	display: grid;	
+	grid-column: 100%;
+	vertical-align: middle;
+
+
+}
+
+.gridContainer{
+	grid-template-rows: auto 1fr auto;
+
+}
+
+
+
+.background{
+
+	background-color: #2a3e50;
+}
+
+/*Color Overlay*/
+.overlay{
+ position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(42,62,80,0.2);
+	z-index: 3;
+	cursor: pointer;
+}
+
+section{
+	height:100%;
+	overflow: hidden;
+	text-align: center;
+
+	
+}
+
+
+
+.home-text-center{
+	position: relative;
+    padding-left: 45px;
+    z-index: 5;
+    margin: auto 20%;
+    color: #ffff;
+    text-align: left;
+    border-left: 1px solid #a0a0a0;
+    letter-spacing: 0.1rem;
+    padding-top: 16px;
+}
+
+.home-text-center h5{
+	opacity: 0.95;
+	line-height: 1.8rem;
+	font-weight: 200;
+	font-size: 16px;
+}
+
+.home-text-center h1{
+ 	 font-weight: 500;
+    font-size: 36px;
+    line-height: 0.98;
+    letter-spacing: 3px;
+    margin: 32px 0;
+
+}
+.full-height{
+	min-height: 100vh;
+}
+
+.dark-bg{
+	background-color: #121212;
+    height: 200vh;
+}
+.col-background{
+	margin: 5rem 2rem;
+	background-color: 	#2a3e50;
+}
+
+/*Navbar Section*/
+.navbar-container { 
+  background-color: #2c3e50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8vh;
+  z-index: 50;
+}
+
+.navbar-container nav .navbar-nav .nav-link{
+	margin-bottom: 8px;
+}
+
+.nav-text{	
+	color:  white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+
+li a.active {   
+  border-bottom: 1px solid #F9A825;
+  padding-right: 5px;
+   transform: scale(1);
+}
+
+li a:hover {
+	color:#F9A825;
+	opacity: 1;
+	text-decoration: none;
+	border: 2px  solid #616161 ;
+	border-collapse: all;
+	opacity: 0.9;
+	background-color: #e67e22;
+	color: #ffff;
+}
+
+#home .textRow h5{
+	color: #F5F5F5;
+}  
+
+.arrow {
+    opacity: 0;
+    position: absolute;
+        left: 50%;
+        top: 50%;
+    transform-origin: 50% 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-first {
+    animation: arrow-movement $ani-speed ease-in-out infinite;
+}
+.arrow-second {
+    animation: arrow-movement $ani-speed $ani-delay ease-in-out
+}
+.arrow:before,
+.arrow:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 3px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+}
+
+.arrow:before {
+    transform: rotate(45deg) translateX(-23%);
+    transform-origin: top left;
+}
+
+.arrow:after {
+    transform: rotate(-45deg) translateX(23%);
+    transform-origin: top right;
+}
+
+// Animation
+@keyframes arrow-movement {
+    0% { 
+        opacity: 10;
+        top: 45%;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+    }
+}
+
+#home .bg-me {
+
+	background-image: linear-gradient(to right,  rgba(42,62,80,.3),   rgba(42,62,80,.3) ), url("../images/me-3.png"); 
+	
+	height: 100%;
+	width: 100%
+	right: 0;
+	min-width: 50%;
+	background-repeat: no-repeat;
+	background-size: contain; 
+	background-attachment: fixed;
+	background-position: right center;
+    -webkit-background-size: contain;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    
+  
+  
+}
+
+#home .container{
+	margin-left: 32px;
+	margin-right: 24px;
+}
+
+
+/*About Me Section*/
+
+#aboutMeSection{
+
+        position: absolute;
+    top: 95%;
+    background-color: #2a3e50;
+    border-radius: 16px;
+    margin: 5% 5%;
+    min-height: 70vh;
+    z-index: 5;
+    font-size: 12px;
+    color: white;
+    opacity: 0.97;
+    overflow: auto;
+    padding: 24px;
+}
+#aboutMeSection .inner-grid-container{
+
+	padding-bottom: 0;
+}
+
+#aboutMeSection .container-fluid{
+	background-color: #ffff;
+	height: 100%;
+	margin-right: 0;
+	padding-right: 0
+	
+}
+
+
+
+
+
+
+#aboutMeSection .normalText p, #contactSection .normalText p {
+    text-align: initial;
+    letter-spacing: 1.1px;
+    line-height: 1.8rem;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-family: inherit;
+    opacity: 0.87; 
+    font-weight: 400;
+    margin-left: 16px;
+}
+
+#aboutMeSection .textRow{
+	background-color: #2c3e50;	
+	grid-row: 1/1;
+	grid-column: 100%;
+	
+}
+ /*TODO: RECHECK THIS DESIGN*/
+
+ 
+element.style {
+    color: #fffff;
+    position: absolute;
+    /* bottom: 0; */
+    top: 95%;
+    z-index: 1000000;
+    background-color: #2a3e50;
+    width: 80%;
+    justify-content: center;
+    margin: auto auto;
+    border-radius: 10px;
+    height: fit-content;
+    margin-left: 10%;
+}
+}
+#aboutMeSection img{
+	margin: 24px auto;
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+
+}
+
+.bg-qualifikation{
+	background-image: linear-gradient(to right,  rgba(18,18,18,.7),  rgba(18,18,18,.7) ), url("../images/slides/slide2.jpg");
+}
+ .bg-qualifikation .gridContainer{
+	top: 80%;
+	height: auto;
+	width: 100%;
+	padding: 32px;
+}
+#qualifikation .row{
+	margin-bottom: 32px;
+	justify-content: center;
+}
+
+/*Combined Section of Kenntnisse, Portfolio and Contact Sections*/
+#combined-section{
+	background-image: linear-gradient(to right,  rgba(18,18,18,.7),  rgba(18,18,18,.7) ), url("../images/slides/slide5.png"); 
+	background-repeat: no-repeat;
+	background-size: cover;	
+	position: relative;
+	top: 100%;
+    height: fit-content;
+    padding: 0;
+  
+}
+
+#combined-section .heading-container {
+
+	margin-top: 16px;
+}
+
+
+
+
+.kenntnisseEntry {
+	vertical-align: middle;
+	margin-bottom: 28px;
+}
+
+.heading-container h1{
+	font-weight: bold;
+	 letter-spacing: 10px;
+	 font-size: 20px;
+	 line-height: 1.8rem;
+}
+
+.kenntnisseEntry .body-text{
+	padding: 0;
+    margin: 0;
+    text-align: left;
+    color: #EEEEEE;
+    letter-spacing: 0.5rem;
+    font-size: 10px;
+}
+
+ .body-text p, 
+p.percentile{
+    margin: 0;
+    font-size: 10px;
+    opacity: 0.87;
+
+}
+
+.sub-heading{
+    color: #ffff;
+    padding: 24px 0 32px;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.2rem;
+    text-align: center;
+    font-weight: 400;
+    opacity: 0.95;
+    letter-spacing: .1rem;
+
+}
+
+svg.kenntnisse{
+  width: 100%;
+    height: 8px;
+    z-index: 3;
+    background-color: #565656;
+    border-radius: 20px;
+
+}
+
+svg .progBar-animation {
+  	height: 8px;
+   fill: #F9A825; 
+   stroke: none;
+   opacity: .8;
+   animation: kenntnisse-intro 6s 1;
+   animation-direction: normal;
+ }
+
+
+.twenty-percent, 
+.thirty-percent,
+.forty-percent,
+.fifty-percent,
+.sixty-percent,
+.seventy-percent,
+.eighty-percent,
+.ninety-percent{
+	height: auto;
+}
+
+.twenty-percent{
+	width: 20%;	
+}
+.thirty-percent{
+	width: 30%;
+}
+.forty-percent{
+	width: 40%;
+}
+.fifty-percent{
+	width: 50%;
+}
+.sixty-percent{
+	width: 60%;	
+}
+.seventy-percent{
+	width: 70%;	
+}
+
+.eighty-percent{
+	width: 80%;	
+}
+
+.ninety-percent{
+	width: 90%;	
+}
+
+
+.source-text{
+   top: 20vh;
+  color: white;
+  font-size: 10px;
+  float: right;
+  writing-mode: vertical-rl;
+  position: absolute;
+  opacity: .5;
+}
+
+.kenntnisse-content-container{
+	position: absolute;
+	top: 20%;
+	left:15%;
+}
+p.percentile{
+	color: #BDBDBD;
+	float:right;
+	font-weight: bold;
+	font-size: 0.70rem;
+}
+
+.kenntnisseEntry{
+	width: 100%;
+	padding: 0 16px 0 24px;
+	width: auto;
+
+}
+
+.body-text{
+	margin-top: 16px;
+}
+
+#qualifikation .progressBar{
+	padding: 0;
+}
+
+
+#portfolioSection .grid{		
+	display: flex;
+	flex-direction: column;
+	grid-gap: 32px;
+
+}
+#portfolioSection .cardItems{
+	 display: grid;
+    grid-gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, auto));
+
+}
+
+#portfolioSection .card {
+	background-color: #212121;	
+	padding: 16px;
+	/*width:560px;*/
+	height:fit-content;
+	/*margin-right: 24px;*/
+}
+
+
+#portfolioSection iframe{
+
+	height:315px;
+
+}
+
+#portfolioSection .card-body {
+
+	opacity: 0.87;
+	text-align: left;
+	padding: 16px 0 0 0;
+	margin: 0;
+}
+
+#portfolioSection .card .card-img-top{
+	height: 9rem;
+
+}
+
+#portfolioSection .card-body .card-title{
+	opacity: 0.90;
+	overflow-y: hidden;
+	font-weight: 400;
+	max-height: 5rem;
+	line-height: 1.3;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+
+#portfolioSection .card-body .card-text, #contactSection .contact-text{
+	opacity: 0.80;
+	overflow-y: hidden;
+	font-weight: 400;
+	max-height: 5rem;
+	line-height: 1.3;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+
+#contactSection .contact-text{
+	opacity: 0.87;
+}
+
+
+#contactSection  {
+	padding: 24px;
+	margin: 0;
+	margin: 10% 0;
+
+}
+
+
+
+}
+/*Google Maps*/
+ #map {
+  max-height: 500px;
+  width:80vw;
+  
+}
+
+#contactSection .map-top-container{
+	margin:24px auto;
+	text-align: center;
+	padding: 12px;
+
+
+}
+
+
+
+footer{
+	background-color: #121212;
+	/*padding: 150px 0 150px;*/
+	width: 100%;
+
+}
+
+ .container{
+	max-width: 540px;
+	color: #ffff;
+}
+
+.center-container {
+	flex-direction: row;
+	grid-gap: 16px;
+	justify-content: center;
+	padding-top: 24px;
+
+}
+
+ .icons{
+	height: 24px;
+	width: 24px;
+}
+
+.copyright-container p{
+	font-size: 11px;
+	color: #a0a0a0;
+
+}
+
+/*Animation transition*/
+@keyframes kenntnisse-intro{	
+	0%{width: 2%;}	
+	
+
+	
+}
+
+@media (max-width: 576px){
+	#home .bg-me {
+
+
+	    background-size: cover;
+	  
+	    background-position: right center;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    overflow: hidden;
+	}
+
+}
+
+@media (min-width: 576px){
+
+	#home .container{
+		margin: auto 20%;
+    	width: initial;
+	} 
+
+	
+}
+
+@media  (min-height:560px ){
+	.sub-heading{
+		margin: 0 0;
+	}
+	.home-text-center {
+		margin-bottom: 30%;
+	} 
+	#home .container{
+		max-width: 540px;
+	
+	}  
+}
+
+@media (min-width: 768px) and (max-width: 1024px)and (min-height: 1024px) {
+	.sub-heading-container{
+		text-align: center;
+
+	}
+	#home .home-text-center{
+		 width: fit-content;
+    	margin: 75% 20%;
+	
+	}  
+
+	
+}
+  
+
+/*Extra Small devices such as mobile*/
+@media (max-width: 767.8px) {
+	.sub-heading-container{
+		text-align: center;
+
+	}
+
+
+}
+@media (min-width: 768px) and (min-height: 768px){
+		#aboutMeSection{
+		min-height: 70vh;
+		overflow: scroll;
+	}
+
+} 
+
+/*Small devices such as tablet*/
+@media (min-width: 768px) { 
+	#aboutMeSection{
+		min-height: 70vh;
+		overflow: auto;
+	}
+
+	#aboutMeSection .normalText p{
+		font-size: 16px;
+		line-height: 1.8;
+	}
+
+	.sub-heading {
+		font-size: 16px;
+		text-align: center;
+		line-height: 2rem;
+		letter-spacing: 3px;
+	}
+
+	.titleMessage .heading .main {
+	    margin-bottom: 5px;
+	    letter-spacing: 5px;
+	    font-weight: 800;
+	    font-size: 3.5rem;
+	}
+
+	.sub-heading-container{
+		text-align: center;
+	}
+
+	.gridContainer{
+		grid-gap: 24px;
+	}
+	.home-text-center h1 {
+	    font-size: 65px;
+	}
+	.home-text-center h5 {
+	    font-size: 18px;
+	}
+
+	#portfolioSection .cardItems {
+	    display: grid;
+	    grid-gap: 24px;
+	    grid-template-columns: repeat(auto-fill, minmax(320px, auto));
+	}
+	
+	.kenntnisseEntry {
+	    width: 100%;
+	    padding: 16px 16px 0 24px;
+	    width: auto;
+	}
+
+
+}
+ /*Large devices such as large desktop*/
+@media (min-width: 992px) {
+
+
+	#contactSection .map-top-container {
+    	margin:0;
+    	padding:32px;
+	}
+
+	#contactSection .col-background {
+	    padding: 32px;
+
+	}
+
+	#combined-section .kenntnisseEntry {
+    	margin-bottom: 24px;
+	}
+
+	#contactSection .section-body-container{
+		    width: fit-content;
+	}
+	
+	
+	
+
+}
