@@ -11,8 +11,6 @@ function increaseNum(){
 	let a = window.getComputedStyle(progress, ':before').getPropertyValue('width');
 
 	a = Math.floor((parseInt(a)/ 10) * 4 );
-	text.innerHTML = a + '%';
-	console.log(a);
 	
 	if(a > 100){
 		text.innerHTML = 100 + '%';
@@ -25,6 +23,13 @@ function increaseNum(){
 			});
 	  });
 	}
+	else{
+		text.innerHTML = a + '%';
+	}
+	
+	console.log(a);
+	
+	
 
 
 }
