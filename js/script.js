@@ -10,7 +10,7 @@ function increaseNum(){
 
 	let a = window.getComputedStyle(progress, ':before').getPropertyValue('width');
 
-	a = Math.floor((parseInt(a)/ 10) * 3 );
+	a = Math.floor((parseInt(a)/ 10) * 2 );
 	text.innerHTML = a + '%';
 	console.log(a);
 	
