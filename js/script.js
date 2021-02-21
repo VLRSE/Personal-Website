@@ -15,10 +15,9 @@ function increaseNum(){
 	console.log(a);
 	
 	if(a >= 100){
-		clearInterval(op);
-
-		console.log(a );
 		text.innerHTML = 100 + '%';
+		clearInterval(op);
+		
 
 		$(".loader .inner-text").fadeOut(750, function(){
 			$(".loader").fadeOut(800,function(){
