@@ -9,30 +9,25 @@ function increaseNum(){
 	const progress =  document.getElementById("progress");
 
 	let a = window.getComputedStyle(progress, ':before').getPropertyValue('width');
-
-	a = Math.floor((parseInt(a)/ 5) * 4 );
+	a = Math.floor((parseInt(a)/ 5) * 2);
 	
-	if(a > 100){
-		text.innerHTML = 100 + '%';
+	text.innerHTML = a + '%';
+	
+	if(a >= 100){
 		clearInterval(op);
+
+		console.log(a );
+		text.innerHTML = 100 + '%';
 		
+		$(".loader .inner-text").fadeOut(850, function(){
+			$(".loader").fadeOut(800,function(){
+				$(".loader .main ").fadeOut(1000)
+			});
+	  	});
 
-	
 	}
-	else{
-		text.innerHTML = a + '%';
-	}
 	
-	$(".loader .inner-text").fadeOut(750, function(){
-		$(".loader").fadeOut(800,function(){
-			$(".loader .main ").fadeOut(1000);
-		});
-	  });
-	
-	console.log(a);
-	
-	
-
-
 }
+
+
 
